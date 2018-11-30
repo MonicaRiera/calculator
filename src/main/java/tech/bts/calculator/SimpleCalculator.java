@@ -12,27 +12,23 @@ public class SimpleCalculator {
         return value;
     }
 
-    public int add(int num) {
+    public void add(int num) {
         this.value += num;
-        return this.value;
     }
 
-    public int subtract(int num) {
+    public void subtract(int num) {
         this.value -= num;
-        return this.value;
     }
 
-    public int multiply(int num) {
+    public void multiply(int num) {
         this.value *= num;
-        return this.value;
     }
 
-    public int divide(int num) {
+    public void divide(int num) {
         if (num == 0) {
             throw new CannotDivideByZeroException();
         }
         this.value /= num;
-        return this.value;
     }
 
     public int getSign() {
@@ -45,31 +41,26 @@ public class SimpleCalculator {
         }
     }
 
-    public int abs() {
+    public void abs() {
         if (this.value < 0) {
             this.value *= -1;
         }
-
-        return this.value;
     }
     
-    public int factorial() {
+    public void factorial() {
         for (int i = getValue()-1; i > 0; i--) {
             this.value *= i;
         }
-        return this.value;
     }
 
-    public int square() {
-        return this.value*this.value;
+    public void square() {
+        this.value *= this.value;
     }
 
-    public int power(int num) {
+    public void power(int num) {
         int power = getValue();
         for (int i = 1; i < num; i++) {
             this.value *= power;
         }
-
-        return this.value;
     }
 }

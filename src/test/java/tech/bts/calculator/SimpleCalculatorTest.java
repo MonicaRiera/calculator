@@ -1,5 +1,6 @@
 package tech.bts.calculator;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -7,8 +8,17 @@ import static org.junit.Assert.*;
 
 public class SimpleCalculatorTest {
 
-    private SimpleCalculator calc = new SimpleCalculator(0);
-    private int x;
+    /**Does your test class work? The initialisation for each test should be done in a @Before method, not the way you do it.
+     * - It did work but, to change it to the correct way, how can I then call the calc variable? If it is inside a method it is
+     * just local for that method. It does not work now.
+
+     - Good thing to do CannotDivideByZeroException. I wonder, you already get an exception if you try to divide by zero, right? YES*/
+
+    @Before
+    public void initialize() {
+        SimpleCalculator calc = new SimpleCalculator(0);
+        int x;
+    }
 
     @Test
     public void sum(){
